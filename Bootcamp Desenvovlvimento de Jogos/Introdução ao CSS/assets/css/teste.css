@@ -42,3 +42,15 @@ div.teste > p {
 div.teste > span > p {
     background-color: yellow;
 }
+
+li.churros + li {
+    color: blueviolet;
+}
+
+span.teste-span ~ span {
+    background-color: tomato;
+}
+
+div.teste > ul.random-list > li.bicarbonato + li {
+    background-color: violet;
+}

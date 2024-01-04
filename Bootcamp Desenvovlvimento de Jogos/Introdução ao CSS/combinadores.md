@@ -94,3 +94,39 @@ div.teste > span > p {
 }
 
 - estou usando como exemplo seletores de tipo(tem um de classe tb) mas pode ser feito com qualquer tipo
+
+
+# Combinador Irmão
+
+
+ - combinador adjacente
+
+    - Seleciona o elemento adjacente ao seletor(simbolizado pelo sinal +)
+      
+li.churros + li {
+    color: blueviolet;
+}
+
+    - bem simples ele vai procurar uma li com churros(classe) e elemento irmão adjacente sofrera a estilização
+
+    - irmão é o elemento diretamento ao lado( em baixo do elemento, da esquerda pra direita). Não são elemento que estão dentro do elemento(uma hieraquia abaixo)
+
+-irmão em geral
+
+  - não precisa ser o irmão diretamente apos
+  - estiliza todos os irmaos ( simbolo ~)
+     
+     span.teste-span ~ span {
+    background-color: tomato;
+}
+
+- Lembrando que a exemplos bacanas no arquivos html teste da maioria dos combinadores selecionados aqui
+
+- da pra fazer um de combinação de combinadores
+
+
+div.teste > ul.random-list > li.bicarbonato + li {
+    background-color: violet;
+}
+
+- Juntando os combinadores de descendente junto com o de irmão adjacente
