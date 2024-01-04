@@ -1,0 +1,44 @@
+h1 {
+    color: red;
+}
+
+ol li {
+    color: aquamarine;
+}
+
+#second-topic {
+    color: green;
+}
+
+.first-topic {
+    color: blueviolet;
+}
+
+
+[title] {
+    color:red;
+}
+
+[title="site-news-1"] {
+    color: aqua;
+}
+
+a[href*='estadao'] {
+    color: yellow;
+}
+
+div section p {
+    color: red;
+}
+
+div section p#want {
+    background-color: blue;
+}
+
+div.teste > p {
+    color:brown;
+}
+
+div.teste > span > p {
+    background-color: yellow;
+}
