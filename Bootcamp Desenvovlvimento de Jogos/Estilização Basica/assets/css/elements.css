@@ -1,0 +1,55 @@
+.exemplo-1 {
+    background-image: url('https://hull.geekship.com.br/wp-content/uploads/2023/11/tevi-art-photo-1026x720.png');
+    width: 400px;
+    height: 400px;
+    background-size: contain;
+}
+
+.exemplo-2 {
+    background-image: repeating-linear-gradient(red 0 20px, blue 20px 40px);
+    width: 400px;
+    height: 400px;
+}
+
+.exemplo-3 {
+    width: 400px;
+    height: 400px;
+    background-image: url('https://dnqbkcosir3ug.cloudfront.net/images/CharacterMain_role_tevi.png'), url('https://s5.static.brasilescola.uol.com.br/be/2023/11/lava-que-no-interior-do-vulcao-se-chama-magma-escorrendo-na-superficie-terrestre-apos-uma-erupcao-vulcanica.jpg');
+    background-size: contain, cover;
+    margin-bottom: 10px;
+}
+
+.exemplo-4 {
+    background-image: url('https://hull.geekship.com.br/wp-content/uploads/2023/11/tevi-art-photo-1026x720.png');
+    width: 400px;
+    height: 400px;
+    background-size: cover;
+    overflow: auto;
+    border: 1px solid red;
+    background-attachment: scroll;
+    margin-bottom: 10px;
+}
+
+.exemplo-5 {
+    background-image: url('https://hull.geekship.com.br/wp-content/uploads/2023/11/tevi-art-photo-1026x720.png');
+    width: 400px;
+    height: 400px;
+    background-size: cover;
+    border: 5px dashed red;
+    background-clip: content-box;
+    padding: 30px;
+    color: white;
+}
+
+.exemplo-6 {
+    width: 400px;
+    height: 400px;
+    background:
+    linear-gradient(135deg, #ECEDDC 25%, transparent 25%) -50px 0,
+    linear-gradient(225deg, #ECEDDC 25%, transparent 25%) -50px 0,
+    linear-gradient(315deg, #ECEDDC 25%, transparent 25%),
+    linear-gradient(45deg, #ECEDDC 25%, transparent 25%);
+    background-size: 100px 100px;
+    background-color: #EC173A;
+    background-blend-mode: screen;
+}
