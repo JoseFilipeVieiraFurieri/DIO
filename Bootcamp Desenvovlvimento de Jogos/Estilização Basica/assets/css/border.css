@@ -92,3 +92,13 @@
     word-break: keep-all;
     background-color: aqua;
 }
+
+.exemplo-8 {
+    width: 200px;
+}
+
+.exemplo-8 p {
+    background-color: aqua;
+    white-space: nowrap;
+    overflow: hidden;
+}

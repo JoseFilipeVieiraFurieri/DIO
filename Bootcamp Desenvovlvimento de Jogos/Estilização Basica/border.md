@@ -223,3 +223,17 @@
          - break-all - quebra todos
          obs: a diferença dos dois e realmente a linha( um leva em consideração a linha o outro o texto inteiro) - ver exemplo
          obs2: Textos em idiomas orientais(chines, japones e coreano)
+    - Writing-mode: define a orientação de escrita
+        - A principal função dessa prop é o uso em liguas que são lidas da direita ( tipo manga) e de baixo pra cima
+        - valores:
+          -horizontal-tb(default - esq para direita)
+          -vertical-rl -> o nome explica - rl(right left)
+          -vertical-lr
+            O texto fica meio estranho, ele fica de lado
+    - Text-overflow: quando o texto passa dos limites da div ( overflow: hidden), mostra uma indicação para o user
+      - valores:
+        clip: corta o texto( o texto vai depois do container)
+        elipsses: define .... quando o texto passa dos limites
+        string: adiciona um ver mais no texto , no entanto so funciona no firefox(!!!!)
+        obs: o indicado nesses casos e usar o ellipses
+    
