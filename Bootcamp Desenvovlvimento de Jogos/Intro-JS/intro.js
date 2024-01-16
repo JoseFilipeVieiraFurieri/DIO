@@ -23,20 +23,30 @@ console.log(30 / 3);
 
 console.log(20 % 2);
 
-
-// desafio 1
-
-const fuelPrice = 5.58;
-const kmLitro = 18.5;
-const travelKm = 8;
-
-const cost = (5.58 / 18.5) * 8;
+console.log(2 ** 2);
 
 
-const priceTravel = ( fuel, km , travel) => {
-    return (fuel / km) * travel;
+//  Operadores de comparação
+
+const numero = 3;
+
+if (numero % 2 === 0) {
+    return console.log("O numero é par");
+} else {
+    return console.log("O numero é impar");
 }
 
-console.log(cost);
+const oddOrEven = (number) => {
+    
+    if (number % 2 === 0) {
+        return console.log("O numero é par");
+    
+    
+    }    
+        
+    return console.log("O numero é impar");
+    
 
-console.log(priceTravel(20, 10, 30));
+}
+
+oddOrEven(3)
