@@ -4,8 +4,6 @@ function soma (num1, num2) {
     return num1 + num2
 }
 
-console.log(soma(2, 10));
-
 // geralmente por arrow function é mais compacto
 
 const soma2 = (num1, num2) => num1 + num2
@@ -15,13 +13,11 @@ const soma2 = (num1, num2) => num1 + num2
 
 const myName = (name) => `Seu nome é ${name}`;
 
-console.log(myName('filipe'));
 
 // armazenar retorno de funçoes em variaveis
 
 let nameEx = myName("Josephina");
 
-console.log(nameEx);
 
 // Juros
 
@@ -33,10 +29,48 @@ const percentualJuros = (valorProduto, Juros) => {
     return ` O acrescimo de juros é de ${produtoJuros} sendo o novo preço ${valorTotalJuros}`
 }
 
-console.log(percentualJuros(100, 10));
+
+const classificarImc = (imc) => {
+
+    if (imc < 18.5 ) {
+        return'Abaixo do peso';
+    } else if (imc > 18.5 && imc < 25) {
+        return 'Peso Normal';
+    } else if ( imc > 25 && imc < 30) {
+        return 'Acima do peso';
+    } else if  (imc > 30 && imc < 40) {
+        return 'Obeso';
+    } else {
+        return 'Obesidade Grave';
+    }
+}
+
+const calculoImc = (peso, altura) => {
+    
+    return peso / altura**2
+
+}
+
+
+// passando função como parametro
+// funçoes podem ser atribuidas a variaveis diretamente( main() = main2 ) ou o retorno delas imc2 = calculoImc(100, 1.85) 
+
 
 // organizar exemplos
 
 const main = () => {
     console.log('Função Principal');
-}
+    console.log(classificarImc(calculoImc(40, 1.85)));
+};
+
+main();
+
+// invocar uma função imediatamente
+
+(function soma2(num1, num2) {
+    console.log(num1 + num2);
+})(12, 6);
+
+
+// colocar a função entre parenteses e depois colocar outro parenteses pra inserir os parametros
+// pode ser inserido para isolar funçoes e pode ser criar funçoes anonimas
