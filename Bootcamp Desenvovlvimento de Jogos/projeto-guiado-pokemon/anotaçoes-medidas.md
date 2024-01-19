@@ -13,3 +13,4 @@
   - grip-templete-rows: organiza as linhas do grid: 1 fr 1fr;
   - grid-templete-column: organiza as colunas do grid : 1fr 1fr;
     - isso quer dizer que o template vai ter 2 colunas e cada uma vai ocupar 1 fração ( cada uma fica com 50% do width do pai)
+
