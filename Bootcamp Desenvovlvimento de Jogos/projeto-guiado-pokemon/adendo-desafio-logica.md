@@ -5,3 +5,5 @@
 - encontrar caminhos para resolver problemas, projetar sistemas e compreender comportamentos
 
 - aprendizagem ativa , transformação digital, comunidade protagonista
+
+# Resolvendo desafios de codigo
