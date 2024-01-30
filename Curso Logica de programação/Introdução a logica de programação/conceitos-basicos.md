@@ -21,3 +21,6 @@ Feature
  ex: feature de cadastrar usuarios( botão de new user, dados do new user(form, etc))
  ex: feature de solicitar viagens onlines
  - São algoritmos diferentes e que proporcianam diferentes ferramentas e interaçoes para o user( deferentes input, process e output)
+ - IDE ( integrated developer interface)
+
+ obs: o curso ta muito basico , então não conseguindo anotar muita coisa
