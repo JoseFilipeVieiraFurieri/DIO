@@ -178,3 +178,5 @@ function getFirstName(name) {
 console.log(getFirstName("José Filipe Vieira Furieri"));
 
 // split tb tem no java
+
+// Objects e classes
