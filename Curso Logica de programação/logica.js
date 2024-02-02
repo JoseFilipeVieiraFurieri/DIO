@@ -147,3 +147,34 @@ if ( num > 8 || num2 > 11) {
 
    // o do while executata a primeira vez sem checar a condição, pq o do while sempre executa primeiro e depois checa
 
+
+   // Function
+
+
+function somar(num1, num2) {
+       return num1 + num2
+   }
+
+console.log(somar(2, 4));
+
+const division = ( num1, num2) => num1 / num2
+
+console.log(division(5, 2));
+
+// cada função deve cumprir um proposito especifico ( SOLID )
+// quebrar funçoes -> se uma função esta fazendo multiplas responsabilidades, o ideal e quebrar ela em pequenas funçoes
+// java tem sobrecarga
+// sobrecarga e quando a duas vezes a mesma função em uma classe( com um mesmo nome) mas com atributos diferentes
+// no JS não tem sobrecarga de metodo, ha alternativas mas não é a mesma coisa
+// funçoes so podem retornar um valor por vez
+
+
+function getFirstName(name) {
+    let nameSplit = name.split(" ") // ela recebe como parametro o aonde ira quebrar e nesse caso o caracter e no espaço em branco entre os caracteres. Se vc uma data poderia ser split("-")
+    console.log(nameSplit);
+    return `O seu primeiro nome é ${nameSplit[0]}`
+}
+
+console.log(getFirstName("José Filipe Vieira Furieri"));
+
+// split tb tem no java
