@@ -1,12 +1,15 @@
 package main
 
 import (
+	"container/list"
+	"errors"
 	"fmt"
 	"log"
 	"os"
+	"path/filepath"
 )
 
-//pacote Os
+//pacote Os //////////////////////////////////////////////////////////////////////////////
 
 // Ja usei antes mas umas das funçoes dele e abrir, ler e escrever em arquivos
 
@@ -44,8 +47,70 @@ func writeFile(filepath string, newText string) {
 // mas se o arquivo não for encontrado ele cria. o truncate foi sugestão da documentação então não sei e por ultimo um filemode(numero que eu ainda não sei mais a fundo)
 // Parece complicado mas é so protocolar mesmo
 
+//// pacote Path/FilePath /////////////////////////////////////////////////////////////////////////////////
+
+// serve para manipular rotinas para facilitar o acesso a caminhos de arquivos do sistema
+
+// path func walk
+
+func directoryAcessInfo(path string) {
+	filepath.Walk(path, func(path string, info os.FileInfo, err error) error {
+		fmt.Println(path)
+		return nil
+	})
+}
+
+// da acesso e printa as pastas correspondente ao diretorio especificado. a função em si walk, aceita o caminho, o modo de leitura e um tratamento de erro. obs: novamente
+// o acesso a documentação para uso correto é imperativo
+
+// Pacote error, Container List
+
+// pacote error
+
+// - serve para manipulação de erros
+
+// lancar um erro simples
+
+// err := errors.New("Ocorreu um erro simples")
+
+// pacote Container
+
+func containerListExample() { // o tipo retornado pelo pacote usado
+	l := list.New()
+	e4 := l.PushBack(4)
+	e1 := l.PushFront(1)
+	l.InsertBefore(3, e4)
+	l.InsertAfter(2, e1)
+
+	// Iterate through list and print its contents.
+	for e := l.Front(); e != nil; e = e.Next() {
+		fmt.Println(e.Value)
+	}
+}
+
+// a função ficou um pouco complicada mais ele cria uma lista, adciona 4, depois 1 como primeiro indice( pushfront). O insert before e o insert after são autoexplicativos
+// Todas são funçoes do pacote container/list. Para iterar sobre os elementos de um lista do tipo *List( que é o tipo gerado pelo pacote), é necessario usar o exemplo de iteração
+// retirado da documentação oficial. um print normal retorna a estrutura interna da lista
+
 func main() {
 	fmt.Println("oi")
 	openFile("Teste.txt")                                                             // ele cria se não achar o arquivo. o openfilipe abre o arquivo para ser feito alguma coisa mas ele não le em si o arquivo
 	writeFile("YearofGoat.txt", "Nenhum conteudo profano aqui seu iconoclasta!!!!!!") // funcionou blz
+	directoryAcessInfo(".")                                                           // da acesso a informação de todo diretorio especificado. Ele puxa o nome de todos os diretorios de todas as pastas
+
+	// pacote error
+
+	err := errors.New("Ocorreu um erro simples")
+	fmt.Println(err)
+
+	if err != nil {
+		fmt.Println("Ocorreu um erro erroso na hora errada")
+	}
+
+	// exemplo bem simples de captura de erro. lembrando que nesse caso eu lancei o error atraves do new(errors.New). Achei o exemplo escolhido bem confuso. Mas tratativa de erro tem que
+	// ver os padroes primeiro
+
+	// pacote container list
+
+	containerListExample()
 }
