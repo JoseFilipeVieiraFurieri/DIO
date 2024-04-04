@@ -1,0 +1,66 @@
+#test-buttom {
+   background-color: black;
+   color: blue;
+   margin-top: 5vh;
+}
+
+/* seletor id o de classe . */
+
+/* Pseudo seletores seriam os selecinadores mais especificos (nth-of-type(3), last-of-type, não adianta decorar porque são muitos */
+
+ul, ol {
+    color: blueviolet;
+}
+
+/* virgula indica mais de um seletor na mesma linha */
+
+ol li {
+    color: blue;
+}
+
+/* seletor de descendencia(somente os elementos que forem fikhas de ol e são li */
+
+div > p {
+    color: aqua;
+}
+
+/* esse seletor > serve para selecionar somente tags p que sejam filhos diretos( filhos não netos) de uma tag p */
+
+div + li {
+    color: brown;
+}
+
+/*  o + serve para selecionar tags irmas ou seja no caso acima o ira selecionar li que sejam irmas diretas de tags divs */
+
+/* em geral e isso da parte de seletores, lembrando que é possivel combinar a torto e a direito os seletores */
+
+/* e sempre importante lembrar do margin, border, padding e content  e as proprietades de largura e altura*/
+
+/* atalhos de medidas são consideras no sentido horario( cima, direita, baixo e esquerda) */
+
+/*  ver o modelo do inspect */
+
+/* tentar não usar o dimensionamento por pixel, ele não e responsivo, melhor usar, vh , vw e outros responsivos */
+
+/* Não adianta tentar decorar, e muito prop */
+
+/*  ja fiz resumo disso tudo, voltar ao coneudo especifico */
+
+/* Flexbox */
+
+/* como não tem muito sobre flexbox vou colocar alguma anotaçoes aqui */
+
+/* o flex organiza os elemetos em dois eixos(axis): row ou column */
+
+/* O flex e aplicado em relação aos pais e filhos ele não automaticamento herdado pelos netos */
+
+.teste-flex {
+    display: flex;
+}
+
+.teste-flex div {
+    height: 300px;
+    width: 300px;
+    border: 1px solid black;
+    margin: 0 0 2vh 1vw;
+}
