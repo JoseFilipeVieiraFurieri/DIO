@@ -116,29 +116,47 @@
         <li>Loki</li>
     </ol>
 
+    <h2>Flex-direction: row e justify-content: center</h2>
     <div class="teste-flex">
         <div id="row"></div>
         <div id="row"></div>
         <div id="row"></div>
     </div>
 
-    <div class="teste-flex">
+    <h2>Flex-direction: column</h2>
+    <div class="teste-flex" id="column">
         <div id="column"></div>
         <div id="column"></div>
         <div id="column"></div>
     </div>
 
-    <div class="teste-flex">
+    <h2>Justify-content: space-between -> distribui igual o espaço entre os elementos começando pela margem da tela</h2>
+    <div class="teste-flex" id="space-bet">
         <div></div>
         <div></div>
         <div></div>
     </div>
 
-    <div class="teste-flex">
+    <h2>Justify-content: space-around -> espaçamento leva em conta a margem </h2>
+    <div class="teste-flex" id="space-around">
         <div></div>
         <div></div>
         <div></div>
     </div>
 
+    <h2>Justify-content: space-evely</h2>
+    <div class="teste-flex" id="space-evely">
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+    
+
+    <p>Importante lembrar que o eixo se altera em relação ao Flex-direction, no row o main axis e o horizontal e no column o vertical
+        Isso é importante pq muda o comportamento do align itens e do justify-content
+    </p>
+
+
+    <button type="button" class="button-1"> Hover </button>
 </body>
 </html>
