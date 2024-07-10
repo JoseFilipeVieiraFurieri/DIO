@@ -1,0 +1,114 @@
+#test-buttom {
+   background-color: black;
+   color: blue;
+   margin-top: 5vh;
+}
+
+/* seletor id o de classe . */
+
+/* Pseudo seletores seriam os selecinadores mais especificos (nth-of-type(3), last-of-type, não adianta decorar porque são muitos */
+
+ul, ol {
+    color: blueviolet;
+}
+
+/* virgula indica mais de um seletor na mesma linha */
+
+ol li {
+    color: blue;
+}
+
+/* seletor de descendencia(somente os elementos que forem fikhas de ol e são li */
+
+div > p {
+    color: aqua;
+}
+
+/* esse seletor > serve para selecionar somente tags p que sejam filhos diretos( filhos não netos) de uma tag p */
+
+div + li {
+    color: brown;
+}
+
+/*  o + serve para selecionar tags irmas ou seja no caso acima o ira selecionar li que sejam irmas diretas de tags divs */
+
+/* em geral e isso da parte de seletores, lembrando que é possivel combinar a torto e a direito os seletores */
+
+/* e sempre importante lembrar do margin, border, padding e content  e as proprietades de largura e altura*/
+
+/* atalhos de medidas são consideras no sentido horario( cima, direita, baixo e esquerda) */
+
+/*  ver o modelo do inspect */
+
+/* tentar não usar o dimensionamento por pixel, ele não e responsivo, melhor usar, vh , vw e outros responsivos */
+
+/* Não adianta tentar decorar, e muito prop */
+
+/*  ja fiz resumo disso tudo, voltar ao coneudo especifico */
+
+/* Flexbox */
+
+/* como não tem muito sobre flexbox vou colocar alguma anotaçoes aqui */
+
+/* o flex organiza os elemetos em dois eixos(axis): row ou column */
+
+/* O flex e aplicado em relação aos pais e filhos ele não automaticamento herdado pelos netos */
+
+.teste-flex {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* align-itens: alinha de acordo com o eixo vertical */
+/* justify-content: alinha de acordo com o eixo horizontol */
+
+.teste-flex div {
+    height: 300px;
+    width: 300px;
+    border: 1px solid black;
+    margin: 0 0 2vh 1vw;
+}
+
+#column {
+    flex-direction: column;
+}
+
+#space-bet {
+    justify-content:space-between;
+}
+
+#space-around {
+    justify-content: space-around;
+}
+
+#space-evely {
+    justify-content: space-evenly;
+}
+
+
+.button-1:hover {
+    background-color: blue;
+    color: blueviolet;
+    cursor: crosshair;
+}
+
+/* pseudo-seletor com o exemplo classico de hover , mas existe muito mais, como shadow, focus, nth-child, a lista esta no w3-scholl*/
+
+.teste-flex div:nth-child(1):hover {
+    background-color: blue;
+}
+
+/* exemplo de combinação um pouco mais avançada , ele esta selecionando a divs que são filhas da classe teste-flex e o nth-child so esta
+Selecionando a primeira de cada */
+
+
+/* Media querys são feitas para fazer a portabilidade para diferentes sistemas */
+
+@media (max-width: 450px) {
+    * {
+        background-color: black;
+    }
+}
+
+/* Lembrando que um site deve visar sempre uma boa experiencia mobile, principalmente no estilo de abordagem mobile first */

@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabelas e forms</title>
+    <link rel="stylesheet" href="/React/Fundamentos-React/Teste-Paginas/css/resumoTabForm.css">
+</head>
+<body>
+    <h1>Tabelas</h1>
+
+    <table border="1">
+        <thead>
+            <tr>
+                <th>Mostro</th>
+                <th>Elemento</th>
+                <th>Especie</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Rathalos</td>
+                <td>Fogo</td>
+                <td>Serpe Alada</td>
+            </tr>
+            <tr>
+                <td>Rathian</td>
+                <td>veneno</td>
+                <td>Serpe Alada</td>
+            </tr>
+            <tr>
+                <td>Narcaruga</td>
+                <td>Fisico</td>
+                <td>Serpe de presas</td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <td colspan="3">Monster Hunter Wilds chegando!!!!!</td>
+        </tfoot>
+    </table>
+
+    <!-- Lembrar thead devine os cabeçalhos, tr engloba esses cabeçalhos e th define o item -->
+    <!-- tbody define o o corpo e cada tr a linha( significa table row), que e defininida tambem por td -->
+    <!-- td representa um celula dentro da tabela, geralmento usada para definir itens fora o cabeçalho 
+        e o colspan serve para mesclar as colunas -->
+
+
+    <!-- Form -->
+
+    <br />
+
+    <form action="" method="get">
+        <div>
+           <label for="name">Nome: </label>
+           <br />
+           <input type="text" name="name" id="nome">
+        </div>
+        <br />
+        <div>
+            <label for="email">Email: </label>
+            <br />
+            <input type="email" name="user-email" id="email">
+        </div>
+        <br />
+        <div>
+            <label for="age">Idade: </label>
+            <br />
+            <input type="number" name:="idade" id="age">
+        </div>
+        <br />
+        <div>
+            <label for="comment">Comentarios abaixo: </label>
+            <br />
+            <input type="textarea" id="comment" name="comment-section">
+        </div>
+        <div>
+            <button type="submit" id="test-buttom">Enviar</button>
+        </div>
+    </form>
+
+    <!-- observaçoes -->
+    <!-- forms precisam ser feitos para serem lembrados não adianta. lembrando que o action e method são mais relevantes quando se esta
+    de fato submetendo(o u simulando ) a submissão de dados pelo user -->
+    <!-- No mais os forms são compostos por campos de input, para captura de nomes, emails, endereço, etc. Alem de elementos como botoes
+    e outras interaçoes por parte do user -->
+    <!-- Lembrando que forms são parte integrante da usabilidade de um site, em resumo preencher formularios é uma atividade chata
+    para o user , então quanto mais amigavel tanto visualmente quanto em questão de interação, melhor para ele -->
+
+
+    <!-- Sobre input -->
+    <!-- Inputs vem com id e nome, id servem como indicadores para serem acessados tanto pelo css como pelo dom. Tambem nesse
+    caso atuam associando o input com a tag label respectiva( label é simplesmente o rotulo). Name e value são importante devido ao envio
+    dos formularios( irei fazer observaçoes devidas nas seçoes respectivas, mas o name e mandado pelo metodo get( na url)) -->
+    <!-- get não e recomendado porque os dados ficam visiveis na url na hora do envio, ja o post envia pelo corpo da request ficando
+    um pouco mais escondido -->
+
+    <!-- HTML semantico tem o intuito de deixar o site explicado cada função, principalmente para o computador e mecanismos de buscos.
+    Ele tem o intuito de facilitar a acessibilidade de usuarios com deficiencia visual, atraves de leitores de tela. Tambem ajuda na
+    Legibilidade do codigo -->
+
+    <!-- Ex: em geral divs tem não tem valor semantico, então e necessario aglobar as coisas com tags mais semanticas -->
+    <!-- header se refere a cabeçalhos, nav a link de navegação, main a seção principal do site, footer o rodape. Existem muitos outras
+    que podem ser acessadas pelo w3 scholls la tem uma lista bem explicada sobre tags semanticas e para que são usadas -->
+
+    <!-- Não vou me longar no css, tenho ja mresumo sobre box models e pseudo classes -->
+
+    <ul>
+        <li>oi</li>
+        <li>vc</li>
+        <li>mesmo</li>
+    </ul>
+
+    <ol>
+        <li>Seu</li>
+        <li>Boemi</li>
+        <li>Loki</li>
+    </ol>
+
+    <h2>Flex-direction: row e justify-content: center</h2>
+    <div class="teste-flex">
+        <div id="row"></div>
+        <div id="row"></div>
+        <div id="row"></div>
+    </div>
+
+    <h2>Flex-direction: column</h2>
+    <div class="teste-flex" id="column">
+        <div id="column"></div>
+        <div id="column"></div>
+        <div id="column"></div>
+    </div>
+
+    <h2>Justify-content: space-between -> distribui igual o espaço entre os elementos começando pela margem da tela</h2>
+    <div class="teste-flex" id="space-bet">
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+
+    <h2>Justify-content: space-around -> espaçamento leva em conta a margem </h2>
+    <div class="teste-flex" id="space-around">
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+
+    <h2>Justify-content: space-evely</h2>
+    <div class="teste-flex" id="space-evely">
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+    
+
+    <p>Importante lembrar que o eixo se altera em relação ao Flex-direction, no row o main axis e o horizontal e no column o vertical
+        Isso é importante pq muda o comportamento do align itens e do justify-content
+    </p>
+
+
+    <button type="button" class="button-1"> Hover </button>
+
+    <script src="/React/Fundamentos-React/Teste-Paginas/resumoTabForm.js"></script>
+</body>
+</html>
