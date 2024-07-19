@@ -19,3 +19,8 @@
      - escala, rotação, posição e angulo( o skew angulo o elemento)
 
      - adicionar um sprite dentro de um node faz com que o sprite fique filho do elemento
+
+  # Whiteboxing
+
+    - termo usado para criar prototipos simples que consistem de cenarios com texturas simples
+    - persisar no google as imagens , mas e bem facil de imaginar
