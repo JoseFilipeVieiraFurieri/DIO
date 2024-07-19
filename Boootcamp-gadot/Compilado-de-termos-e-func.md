@@ -64,4 +64,10 @@
 
     ## obs importante -> em casos de objetos filhos em uma mesma cena, e importante notar que o filho se posiciona em relação ao pai. ou seja o pai geralmente se posiciona no vetor 0 , 0 mais o filho fica no canto da tela pq ele usa o pai como base e não a cena. Por isso se usa valores negativos para centralizar os filhos em relação aos pais( no caso que usei foi um uma caixa de colição e seu color rect)
 
+    # Boas praticas Godot
+
+     - arquivos principais da cena -> GameManager
+
+     - scripts vinculados -> na pasta script com o nome game_manager
+
   
