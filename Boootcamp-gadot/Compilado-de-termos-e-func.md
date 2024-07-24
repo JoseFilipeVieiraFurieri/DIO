@@ -64,10 +64,47 @@
 
     ## obs importante -> em casos de objetos filhos em uma mesma cena, e importante notar que o filho se posiciona em relação ao pai. ou seja o pai geralmente se posiciona no vetor 0 , 0 mais o filho fica no canto da tela pq ele usa o pai como base e não a cena. Por isso se usa valores negativos para centralizar os filhos em relação aos pais( no caso que usei foi um uma caixa de colição e seu color rect)
 
+    # CharacterBody2d
+     - Especifico para criar personagem que irão interagir com a fisica
+     - colocando o script basic o godot ja coloca algumas funçoes basicas, como movimento e pulo
+       obs: ja detecta até o controle
+
+     - Props
+       - motion -> grounded e float
+
+    # axis e vector  
+
+
+                              
+                             +1 y
+                             |
+                             |
+                             |
+                             |
+  -1 ------------------------0------------------------------ x +1        get_axis = <-, ->
+                             |                                           get_vector = <-, -> , down, up - na ordem
+                             |
+                             |
+                             |
+                             -1
+
+    - e possivel usar numeros float
+    - serve para pegar a pressão
+    - por padrão a seta pra direita pega o valor vetor +1, no entando certos controles como os sticks do ps4 podem controlar a velocidade pegando valores fracionados
+    - o mesmo serve para o eixo y(pra cima positivo, baixo negativo)
+
+    # Camera2D
+
+     - na cena a caixa azul transparente é a camera
+     - para ter maior controle sobre ela e necessario crair o node especifico
+     - uma das maneiras mais simples de fazer a camera seguir o personagem e colocar ela como filho dele
+
     # Boas praticas Godot
 
      - arquivos principais da cena -> GameManager
 
      - scripts vinculados -> na pasta script com o nome game_manager
+
+     matheus.ganem@betrybe.com
 
   
