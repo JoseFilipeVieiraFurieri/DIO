@@ -49,3 +49,11 @@
  - Terrain sets
  - Navigagation layer
  - entre outros
+
+
+ # Ordem de renderização
+
+  - controla atraves do z-axis
+  - deu erro no meu - rever para frente
+
+# Parallax
