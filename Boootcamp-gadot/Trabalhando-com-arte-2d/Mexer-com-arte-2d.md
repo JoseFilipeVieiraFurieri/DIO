@@ -57,3 +57,34 @@
   - deu erro no meu - rever para frente
 
 # Parallax
+
+- paralax e um efeito adicionado ao cenario de jogos 2d para criar a ilusão de movimento
+- o efeito e obtido ao adicionar multiplas camadas de background e fazer com que elas se movam em diferentes velocidas
+- um exemplos e colocar nuvens se movendo em um back estatico
+- efeito muito usado desde a epoca 16 bit até jogos 2d atuais
+
+- a imagem de background tem que ser adequada a resolução padrão do godot
+  se a tela interna do godot for x e a resolução da imagem for 1920/1080p ( full hd)
+   vc divide x/1920 e 1080/y ( referente ao eixos)
+
+ # o paralax tem que ser colocado no node Parallax Background do contrario ele vai se comportar como uma imagem estatica
+
+ - observar a propriedade motion
+
+  # o paralax tem como node filho o paralax layer que irão representar as camadas
+    - cada imagem sera colocada em um layer
+
+ - Motion
+   
+   - Se refere ao movimento das camadas
+   - tem 3 propriedades
+     escala: se refere ao posição e tamanho as outras camadas. 0 , 0 fica a camada no fundo
+     offset
+     mirroring: repetição da camada, comvem colocar para se repetir na resolução original
+
+   - as camadas são orientadas sempre o mais longe( no ceu)
+
+   - Artes em pixel art alteram o mecanismo de filtro
+     não vou entrar mais em detalhes pq não vai no escopo do projeto
+    
+  - falta bastante coisa na verdade. Eventos, animação, etc
