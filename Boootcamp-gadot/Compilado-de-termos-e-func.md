@@ -104,6 +104,33 @@
      - flip h -> orienta a direção hor. do spr
             v -> vertical
 
+     - NA hora de colocar o spritesheet que contem as animaçoes
+       olhar na aba animation e ver quantos quadros de animação de n h(horizontal) e no v
+       frame indica de de forma linear os frames que serão rodados. São no exemplo da dio 47 frames e avançando eles vc consegue o efeito
+       ele ira unir tudo um so sprite, ele começa no primeiro frame, mas os outros podem ser acessados atraves do flame_coords( x , y)
+       por isso e importante colocar label nesses casos
+
+    # AnimationPlayer
+
+     - permite criar as animaçoes do sprite
+     - abre a aba animation
+     - essa aba funciona de maneira a exibir is frames da animação em um tipo de editor
+     - a barra superior possui indica os segundos
+       lembrando que o fps geralmente é 30/60 fps
+
+     - O lupa embaixo expande o segundo
+
+     - loop -> repetir a animação
+
+    - No editor agora e possivel atraves de um simbolo de chave associar a propriedade do sprite2d ao animation track
+
+    - por padrão o track fica no 1 segundo mas vc pode editar para ficar certinhos nos quadros da animação( se a ani. der no total 0.55 segundos por exemplo)
+
+    - os packs com a animação geralmente informa a velocidade da animação
+      - o tiny swords no caso e de 100ms ou 0.1( fica no snap abaixo)
+
+    - Botão autoplay on load -> define a animação que sera carregada ao iniciar o node
+
     # Label
 
      - Especificamente para colocar textos( ou rotulos)
