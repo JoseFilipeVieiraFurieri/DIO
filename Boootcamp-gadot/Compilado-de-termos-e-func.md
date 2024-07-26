@@ -99,6 +99,15 @@
      - para ter maior controle sobre ela e necessario crair o node especifico
      - uma das maneiras mais simples de fazer a camera seguir o personagem e colocar ela como filho dele
 
+    # Sprite2d
+
+     - flip h -> orienta a direção hor. do spr
+            v -> vertical
+
+    # Label
+
+     - Especificamente para colocar textos( ou rotulos)
+
     # Boas praticas Godot
 
      - arquivos principais da cena -> GameManager
