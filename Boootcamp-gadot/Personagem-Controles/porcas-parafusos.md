@@ -47,3 +47,52 @@
           e basicamento o useContext mesmo so que mais facil kkkkk
 
         - Uma maravilha esse singleton
+
+  # no godot so pode colocar um script por node
+
+    # existem maneiras de contornar isso como colocar o script de comportamente e um NOde filho
+
+
+  # grupos
+
+    - são um maneira de agrupar nodes
+    - fica na aba node ao lado do inspect( aba Node)
+    - vc cria um grupo e coloca um node dentro
+    - depois vc pode acessar os elementos desse grupo em outro script dessa maneira
+      var enemies = get_tree().get_nodes_in_group("enemies")
+      - o get_tree e necessario para acessar a arvore do pawn e pegar os nodes no grupo enemy
+
+      obs: ele tipou os script colocando que era do tipo enemy
+      so que no codigo do stalk_player ele tenta atribuir ao enemy( que agora é uma classe Enemy) o pawn ( que é um charbody2d)
+      o meu godot não deixou nem por reza essa traquinagem então ignorei completamente a tipagem por classe. o dele foi sussa, vai entender
+
+
+# ANimation player
+
+ - e possivel chamar funçoes de acordo com a  animação
+  so colocar no + o "call method track" e escolher a animação e em que sprite ela sera chamada
+
+  # usar o animated sprite 2d para animaçoes mais simples
+
+ - No caso a animação de morte chama uma função nativa
+   ## a queue_free() que depois que toca a animação o elemento e removido do jogo
+
+# Area 2d
+
+ - node que cria uma area especifica na cena
+ - pode ser usado para colocar hit-Box
+
+
+# DOT PRODUCT
+
+ - função matematica que obtem um resultado a partir de uma comparação de vetores
+
+   personagem(2, 2)    vetor.visão     --------------------------------------------->       inimigo( 4, 2)
+                       vetor.ataque    --------------------------------------------->                         
+
+ - o godot ja tem uma função para calcular o dot product que ira retonar sempre valores entre -1 a 1
+   1 sera quando as duas linhas estão perpediculares
+   -1 o jogador esta olhando ao contrario
+   se for em outro angulo 0
+
+   - em resumo o dot product compara se dois vetores estão indo na mesma direção( mesma(1), oposta(-1), acima(0), 45graus(0.5))
