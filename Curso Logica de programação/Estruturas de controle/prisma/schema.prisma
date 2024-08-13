@@ -1,0 +1,63 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model Provider {
+  id              Int       @id @default(autoincrement())
+  name            String
+  username        String    @unique
+  password        String    @unique
+  clientId        String    @unique @map("client_id")
+  audience        String
+  token           String?
+  tokenExpiration DateTime?
+  createdAt       DateTime  @default(now()) @map("created_at")
+  updatedAt       DateTime  @updatedAt
+
+  @@map("providers")
+}
+
+model FgtsSimulation {
+  id                Int               @id @default(autoincrement())
+  provider          String
+  avaibleBalance    Float             @map("avaible_balance")
+  emissionAmount    Float             @map("emission_amount")
+  totalBalance      Float             @map("total_balance")
+  totalInstallments Int               @map("total_installments")
+  document          String
+  createdAt         DateTime          @default(now())
+  updatedAt         DateTime          @updatedAt @map("updated_at")
+  FgtsInstallment   FgtsInstallment[]
+
+  @@map("fgts_simulation")
+}
+
+model FgtsInstallment {
+  id             Int            @id @default(autoincrement())
+  dueDate        DateTime       @map("due_date")
+  duePrincipal   DateTime       @map("due_principal")
+  fgtsSimulation FgtsSimulation @relation(fields: [fgtsId], references: [id])
+  fgtsId         Int            @map("fgts_id")
+  createdAt      DateTime       @default(now()) @map("created_at")
+  updatedAt      DateTime       @updatedAt @map("updated_at")
+
+  @@map("fgts_installments")
+}
+
+model SimulationFees {
+  id         Int      @id @default(autoincrement())
+  feesId     String   @map("fees_id")
+  name       String
+  created_at DateTime @default(now()) @map("created_at")
+  updatedAt  DateTime @updatedAt @map("updated_at")
+
+  @@map("simulation_fees")
+}
